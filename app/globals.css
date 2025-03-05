@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 263 85% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 91% 53%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .theme-dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --primary: 263 85% 58%;
+    --secondary: 217 91% 53%;
+  }
+
+  .theme-cyberpunk {
+    --background: 263 85% 5%;
+    --foreground: 0 0% 100%;
+    --primary: 326 100% 60%;
+    --secondary: 180 100% 50%;
+  }
+
+  .theme-midnight {
+    --background: 230 35% 7%;
+    --foreground: 0 0% 100%;
+    --primary: 230 100% 65%;
+    --secondary: 250 100% 72%;
+  }
+
+  .theme-neon {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --primary: 135 100% 50%;
+    --secondary: 60 100% 50%;
+  }
+
+  .glass-low {
+    --glass-opacity: 0.1;
+    --glass-blur: 4px;
+  }
+
+  .glass-medium {
+    --glass-opacity: 0.15;
+    --glass-blur: 8px;
+  }
+
+  .glass-high {
+    --glass-opacity: 0.2;
+    --glass-blur: 16px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 15s linear infinite;
+}
+
