@@ -1,2 +1,2 @@
 # Splash
-An color palette genrataing web app
+An color palette generating web app
